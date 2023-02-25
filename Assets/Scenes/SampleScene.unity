@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 143771376}
   m_Layer: 0
   m_Name: Tree
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 225229816}
   m_Layer: 0
   m_Name: Tree (2)
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 250139512}
   m_Layer: 0
   m_Name: Soldier
-  m_TagString: Untagged
+  m_TagString: Soldier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 516883624}
   m_Layer: 0
   m_Name: Tree (1)
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3865,7 +3865,7 @@ GameObject:
   - component: {fileID: 1292060150}
   m_Layer: 0
   m_Name: Tree (3)
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
