@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CollisionManager : MonoBehaviour
 {
-    int soldierCount = 0;
+    int heliSoldierCount = 0;
     int maxSoldierCount = 3;
+    int soldiersRescued = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -19,31 +20,48 @@ public class CollisionManager : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        switch(collision.gameObject.tag)
+        switch (other.gameObject.tag)
         {
             case "Tree":
                 UnityEditor.EditorApplication.isPlaying = false;
                 //Add a way to go to a new scene (with UI) stating they lost etc...
                 break;
             case "Soldier":
-                ManagerSoldierCount(collision);
+                ManagerSoldierCount(other);
                 break;
             case "MedTent":
-
+                MedicalTent();
                 break;
             default:
                 break;
         }
     }
 
-    private void ManagerSoldierCount(Collision collision)
+    void ManagerSoldierCount(Collider other)
     {
-        if (soldierCount < maxSoldierCount)
+        if (heliSoldierCount < maxSoldierCount)
         {
-            Destroy(collision.gameObject);
-            soldierCount++;
+            Destroy(other.gameObject);
+            heliSoldierCount++;
+            Debug.Log("Helicopter: " + heliSoldierCount);
+        }
+        else
+        {
+            ;
+        }
+    }
+
+    private void MedicalTent()
+    {
+        if (heliSoldierCount != 0)
+        {
+            soldiersRescued = soldiersRescued + heliSoldierCount;
+            heliSoldierCount = 0;
+
+            Debug.Log("MedicalTent: " + soldiersRescued);
+            Debug.Log("Helicopter: " + heliSoldierCount);
         }
         else
         {
