@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CollisionManager : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
+
     int heliSoldierCount = 0;
     int maxSoldierCount = 3;
     int soldiersRescued = 0;
@@ -11,7 +13,7 @@ public class CollisionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -45,6 +47,7 @@ public class CollisionManager : MonoBehaviour
         {
             Destroy(other.gameObject);
             heliSoldierCount++;
+            audioSource.Play();
             Debug.Log("Helicopter: " + heliSoldierCount);
         }
         else
