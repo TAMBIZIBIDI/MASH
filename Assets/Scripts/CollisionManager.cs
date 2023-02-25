@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionManager : MonoBehaviour
 {
@@ -27,8 +28,7 @@ public class CollisionManager : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Tree":
-                UnityEditor.EditorApplication.isPlaying = false;
-                //Add a way to go to a new scene (with UI) stating they lost etc...
+                SceneManager.LoadScene("GameOver");
                 break;
             case "Soldier":
                 ManagerSoldierCount(other);
