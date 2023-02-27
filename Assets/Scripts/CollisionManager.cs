@@ -11,7 +11,7 @@ public class CollisionManager : MonoBehaviour
     int maxSoldierCount = 3;
     int soldiersRescued = 0;
 
-    UI uiClass;
+    public UI uiClass;
 
     // Start is called before the first frame update
     void Start()
