@@ -5,8 +5,13 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-    public Text heliTxt;
-    public Text rescuedTxt;
+    public Text heliScore;
+    public Text rescuedScore;
+
+    void Awake()
+    {
+        
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +27,11 @@ public class UI : MonoBehaviour
 
     public void UpdateHeliScore(string soldiersInHeli)
     {
-        heliTxt.text = "Soldiers in Helicopter: " + soldiersInHeli;
+        heliScore.text = soldiersInHeli;
     }
 
     public void UpdateRescuedScore(string rescuedSoldiers)
     {
-        rescuedTxt.text = "Soldiers Rescued: " + rescuedSoldiers;
+        rescuedScore.text = rescuedSoldiers;
     }
 }
