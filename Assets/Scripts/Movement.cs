@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene("Game");
+        }
+
         float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * movementSpeed;
         float moveY = Input.GetAxis("Vertical") * Time.deltaTime * movementSpeed;
 
