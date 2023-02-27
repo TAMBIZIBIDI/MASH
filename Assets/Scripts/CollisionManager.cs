@@ -7,6 +7,8 @@ public class CollisionManager : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
 
+    public GameManager gm;
+
     int heliSoldierCount = 0;
     int maxSoldierCount = 3;
     int soldiersRescued = 0;
@@ -51,7 +53,6 @@ public class CollisionManager : MonoBehaviour
             Destroy(other.gameObject);
             heliSoldierCount++;
             audioSource.Play();
-            Debug.Log("Helicopter: " + heliSoldierCount);
         }
         else
         {
@@ -64,10 +65,9 @@ public class CollisionManager : MonoBehaviour
         if (heliSoldierCount != 0)
         {
             soldiersRescued = soldiersRescued + heliSoldierCount;
+            gm.soldiersInField = gm.soldiersInField - heliSoldierCount;
+            Debug.Log(gm.soldiersInField);
             heliSoldierCount = 0;
-
-            Debug.Log("MedicalTent: " + soldiersRescued);
-            Debug.Log("Helicopter: " + heliSoldierCount);
         }
         else
         {

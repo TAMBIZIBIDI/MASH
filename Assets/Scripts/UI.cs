@@ -8,11 +8,6 @@ public class UI : MonoBehaviour
     public Text heliScore;
     public Text rescuedScore;
 
-    void Awake()
-    {
-        
-    }
-
     // Start is called before the first frame update
     void Start()
     {

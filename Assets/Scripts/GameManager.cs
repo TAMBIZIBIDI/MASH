@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    int soldiersInField;
+    public int soldiersInField;
     bool crashed;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        soldiersInField = GameObject.FindGameObjectsWithTag("Soldier").Length;
+        Debug.Log(soldiersInField);
     }
 
     // Update is called once per frame
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         if(soldiersInField == 0)
         {
+            Debug.Log("You win");
             SceneManager.LoadScene("YouWin");
         }
         else if(crashed)
