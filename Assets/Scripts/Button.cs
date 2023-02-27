@@ -19,7 +19,7 @@ public class Button : MonoBehaviour
 
     public void RetryGame()
     {
-        SceneManager.LoadScene("Game"); //Change???
+        SceneManager.LoadScene("Game");
     }
 
     public void QuitApplication()

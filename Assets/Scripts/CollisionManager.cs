@@ -11,6 +11,8 @@ public class CollisionManager : MonoBehaviour
     int maxSoldierCount = 3;
     int soldiersRescued = 0;
 
+    UI uiClass;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,8 @@ public class CollisionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        uiClass.UpdateHeliScore(heliSoldierCount.ToString());
+        uiClass.UpdateRescuedScore(soldiersRescued.ToString());
     }
 
     void OnTriggerEnter(Collider other)
