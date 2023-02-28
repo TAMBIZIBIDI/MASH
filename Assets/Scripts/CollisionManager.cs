@@ -35,6 +35,9 @@ public class CollisionManager : MonoBehaviour
             case "Tree":
                 SceneManager.LoadScene("GameOver");
                 break;
+            case "Shell":
+                SceneManager.LoadScene("GameOver");
+                break;
             case "Soldier":
                 ManagerSoldierCount(other);
                 break;
